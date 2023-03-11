@@ -82,3 +82,19 @@ function d($d = "default")
 
 echo "\nthis is the " . d() . "\n";
 echo "this is not the default" . d("\nnot the default");
+
+// pass by reference
+// permanently change a variable with a function
+// prepend the parameter &$parameter
+$string_one = "you have teeth";
+$string_two = "toads are nice";
+$string_three = "brown is my favorite color";
+
+// Write your code below:
+function convertToQuestion(&$string){
+    $string = "Do you think " . $string . "?\n";
+    return $string;
+}
+echo convertToQuestion($string_one);
+echo convertToQuestion($string_two);
+echo convertToQuestion($string_three);
