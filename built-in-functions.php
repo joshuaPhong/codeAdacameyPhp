@@ -53,4 +53,10 @@ function calculateTip($totalCost): float
 }
 echo "\n" . calculateTip(123);
 
-// generating random numbers. rand()
+// generating random numbers. rand(): int and  rand($min, $max): int
+$max = getrandmax();
+
+echo " Rand Max: " . $max;
+
+echo "\r\nrand(): " . rand(); // Prints a number between 0 and $max
+echo "\n rand with min = 4 and max = 56: " . rand(4, 56);
