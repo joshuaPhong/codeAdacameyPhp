@@ -43,14 +43,16 @@ function calculateDistance($num1, $num2): float|int
     $distance = $num1 - $num2;
     return abs($distance);
 }
+
 echo "\n" . calculateDistance(4, -1);
 
 // round().
 function calculateTip($totalCost): float
 {
-    $newTotal = $totalCost + ($totalCost * (18/100));
+    $newTotal = $totalCost + ($totalCost * (18 / 100));
     return round($newTotal);
 }
+
 echo "\n" . calculateTip(123);
 
 // generating random numbers. rand(): int and  rand($min, $max): int
@@ -60,3 +62,29 @@ echo " Rand Max: " . $max;
 
 echo "\r\nrand(): " . rand(); // Prints a number between 0 and $max
 echo "\n rand with min = 4 and max = 56: " . rand(4, 56);
+
+// convert to shout example. uses string to upper and appends an !
+function convertToShout($string): string
+{
+    return strtoupper($string) . "!";
+}
+
+echo "\n" . convertToShout("hey there php");
+
+// using the ceil function. rounds up a number to the nearest int
+function tipGenerously($num)
+{
+    $num = $num + ($num * (20 / 100));
+    return ceil($num);
+}
+
+echo "\nusing the ceil function: 123.67 and 20%:  " . tipGenerously(123.67);
+
+// using th round function to set significant figures
+function calculateCircleArea($diameter)
+{
+    $area = pi() * ($diameter / 2) ** 2;
+    return round($area, 14);
+}
+
+echo "\n the round() to 14 significant figures, on the area of a circle using diameter as a parameter and 232.45 as an argument: " . calculateCircleArea(23.45);
