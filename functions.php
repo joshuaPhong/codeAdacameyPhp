@@ -98,3 +98,22 @@ function convertToQuestion(&$string){
 echo convertToQuestion($string_one);
 echo convertToQuestion($string_two);
 echo convertToQuestion($string_three);
+
+// variable scope
+// variables within functions have local scope. They cannot be accessed from outside the function
+// The global keyword. Can then use variables outside the local scope/ function
+// All the variables in this function are local.
+function calculateDaysLeft($feed_quantity, $number, $rate): float|int
+{
+    return $feed_quantity / ($number * $rate);
+}
+echo calculateDaysLeft(300, 2, 30);
+
+// this function has a global variable so that it can be used outside the function
+$feed_quantity = 300;
+function calculateDaysLeft2($number, $rate): float|int
+{
+    global $feed_quantity;
+    return $feed_quantity / ($number * $rate);
+}
+echo calculateDaysLeft2(2, 120);
