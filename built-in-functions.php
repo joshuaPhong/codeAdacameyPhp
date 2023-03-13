@@ -72,7 +72,7 @@ function convertToShout($string): string
 echo "\n" . convertToShout("hey there php");
 
 // using the ceil function. rounds up a number to the nearest int
-function tipGenerously($num)
+function tipGenerously($num): float
 {
     $num = $num + ($num * (20 / 100));
     return ceil($num);
@@ -81,7 +81,7 @@ function tipGenerously($num)
 echo "\nusing the ceil function: 123.67 and 20%:  " . tipGenerously(123.67);
 
 // using th round function to set significant figures
-function calculateCircleArea($diameter)
+function calculateCircleArea($diameter): float
 {
     $area = pi() * ($diameter / 2) ** 2;
     return round($area, 14);
