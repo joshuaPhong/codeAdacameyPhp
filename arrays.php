@@ -57,3 +57,5 @@ $winners = [
     $round_three[4]
 ];
 echo "\narray of indexed arrays: " . implode("|", $winners);
+
+// adding and changing elements. Ordered arrays
