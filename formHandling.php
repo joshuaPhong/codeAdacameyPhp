@@ -8,7 +8,7 @@
 ?>
 <!--action="" default is self-->
 <!--action="" will send the user to the specified page on submit-->
-<html>
+<html lang="">
 
 <body>
 $_REQUEST:
