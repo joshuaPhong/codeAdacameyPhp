@@ -63,3 +63,11 @@ echo implode("' '", $number_array);
 var_dump($number_array);
 
 // joining arrays
+//  are joined with the union operator +
+// only unique keys are added (int or string)
+$join = $array_short + $array_long;
+echo "\njoin short and long\n";
+print_r($join);
+echo "\nbecause the arrays short and long have the same keys there is no extra: Lets try short plus num: \n";
+$join2 = $array_short + $number_array;
+print_r($join2);

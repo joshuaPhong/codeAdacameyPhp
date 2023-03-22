@@ -117,3 +117,5 @@ function calculateDaysLeft2($number, $rate): float|int
     return $feed_quantity / ($number * $rate);
 }
 echo calculateDaysLeft2(2, 120);
+echo "well done!";
+echo "changed?";
