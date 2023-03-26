@@ -152,7 +152,7 @@ echo airQuality("green");
 echo airQuality("purple");
 
 // switch using fall through. i.e. not using breaks
-function returnSeason($month)
+function returnSeason($month): string
 {
     switch ($month) {
         case "December":
