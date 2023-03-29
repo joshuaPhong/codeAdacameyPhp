@@ -39,3 +39,34 @@ while ($i < 5) :
     $i++;
 endwhile;
 ?>
+
+<!--echo php variables in html -->
+<h1>Shoe Shop</h1>
+<?php
+$footwear = [
+        "sandals" => 4,
+        "sneakers" => 7,
+        "boots" => 3
+];
+?>
+<p>Our footwear:</p>
+<?php
+foreach ($footwear as $type => $brands):
+    ?>
+    <p>We sell <?=$brands?> brands of <?=$type?></p>
+<?php
+endforeach;
+?>
+<!--Review-->
+<!---->
+<!--With the PHP shorthand you have just learned, you can now create more readable HTML files with embedded PHP loops.-->
+<!---->
+<!--Here are the key ideas from this lesson:-->
+<!---->
+<!--    The PHP shorthand for loops uses a colon (:) instead of a bracket ({) to open the code block.-->
+<!--    The shorthand uses keywords to close the code block instead of a bracket (}):-->
+<!--        Use endfor to close a for loop-->
+<!--        Use endforeach, to close a foreach loop-->
+<!--        Use endwhile, to close a while loop-->
+<!--    The closing keyword needs to be followed by a semicolon (;).-->
+<!--    Make sure to re-enter PHP mode using --><?php //or the echo shorthand <?= before using PHP variables in the loop
