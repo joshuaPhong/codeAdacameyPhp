@@ -2,17 +2,17 @@
 
 class AdamsUtils
 {
-    public static $the_answer = 42;
+    public static int $the_answer = 42;
 
-    public static function addTowel($string)
+    public static function addTowel($string): string
     {
         return $string . " and a towel.";
     }
-}
+};// we added the colon because we need to close the string identifier
 
 $items = "I brought apples";
 
-// accessing static variable using the scope resolutin operator ::
+// accessing static variable using the scope resolution operator ::
 echo AdamsUtils::$the_answer;
 // accessing a static method / function
 echo '<br>';
